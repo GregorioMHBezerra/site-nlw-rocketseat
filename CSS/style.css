@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+
+:root{
+    --cor0: #A1A1AA;
+    --cor1: #9572fc;
+    --cor2: #43e7ad;
+    --cor3: #e2d45c;
+    --cor4: #2A2634;
+    --cor5: #010204;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    padding-top: 32px;
+    height: 120px;
+}
+
+header div{
+    width: 120px;
+    margin:  auto;
+    background-image: linear-gradient(90deg, var(--cor1), var(--cor2), var(--cor3));
+    border-radius: 50%;
+    display: flex;
+    padding: 2px;
+    transition: transform 0.3s;
+    animation: descendo 0.7s 0.5s backwards;
+}
+
+header div:hover{
+    transform: scale(1.1);
+}
+
+
+header img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+body{
+    background-image: url(../imagens/imagem-de-fundo2-1240x1800.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #010204;
+    color: white;
+    font-family: var(--fonte-padrao);
+    line-height: 160%;
+    height: 2000px;
+}
+
+main{
+    max-width: 560px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+    
+}
+
+main section{
+    background-image: linear-gradient(90deg, var(--cor1), var(--cor2), var(--cor3));
+    padding-top: 4px;
+    border-radius: 10px;
+}
+/* Poderia*/
+main section:nth-child(1){
+    animation: subindo 0.5s backwards;
+}
+
+main section:nth-child(2){
+    animation: subindo 0.5s 0.5s backwards;
+}
+
+main section:nth-child(3){
+    animation: subindo 0.5s 1s backwards;
+}
+
+section div{
+    background-color: var(--cor4);
+    padding: 24px 10px 15px 10px;
+    border-radius: 8px;
+}
+
+section ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li{
+    transition: transform 0.3s;;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+section h2{
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.47px;
+}
+
+section p{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.18px;
+    color: var(--cor0);
+}
+
+div#div_tecnologia img{
+    max-width: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10px;
+}
+div#div_redes img{
+    max-width: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 10px;
+}
+div#div_canais img{
+    max-width: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--cor0);
+}
+
+
+/*Animação*/
+
+@keyframes descendo {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subindo {
+    from{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
